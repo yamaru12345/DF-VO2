@@ -1075,9 +1075,8 @@ class VisualOdometry():
             else:
                 raise NotImplementedError
             self.timers.timers["tracking"].append(time()-start_time)
-            print(img_id)
-            print(self.ref_data["flow"])
-            np.save(f'flow_map_{img_id}.npy', self.ref_data["flow"])
+            if img_id > 0:
+                np.save(f'flow_map_{img_id}.npy', self.ref_data["flow"][img_id - 1])
 
             """ Visualization """
             start_time = time()
