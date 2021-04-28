@@ -101,6 +101,6 @@ visualization:
 # ----------------------------------------------------------------------------
 directory:
   gt_pose_dir: dataset/kitti_odom/gt_poses/
-  img_seq_dir: dataset/odom_data/
+  img_seq_dir: ../frames/
   depth_dir: dataset/depth/
   mask_dir: dataset/mask/
