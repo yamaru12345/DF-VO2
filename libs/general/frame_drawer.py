@@ -329,7 +329,7 @@ class FrameDrawer():
         if vo.tracking_stage > 1:
             vis_flow = vo.ref_data['flow'][vo.ref_data['id'][0]].transpose(1,2,0)
             vis_flow = flow_to_image(vis_flow)
-            np.save(f'./flow_{vo.ref_data["id"][0]}.npy', vis_flow)
+            np.save(f'./flow_vis_{vo.ref_data["id"][0]}.npy', vis_flow)
             vis_flow = vo.ref_data['flow_diff'][vo.ref_data['id'][0]][:,:,0]
             normalizer = mpl.colors.Normalize(vmin=0, vmax=0.5)
             mapper = mpl.cm.ScalarMappable(norm=normalizer, cmap='jet')
